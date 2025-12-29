@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <title>DesiMart</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff6600">
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #e8f5e9;
+            color: #1b5e20;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            background-image: linear-gradient(to bottom right, #e8f5e9, #c8e6c9);
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 100, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #1b5e20;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight {
+            color: #f57c00;
+            font-weight: bold;
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            color: #388e3c;
+        }
+        
+        .enter-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .enter-btn:hover {
+            background-color: #388e3c;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.4);
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            width: 200px;
+            margin: 15px;
+            padding: 20px;
+            background-color: #f1f8e9;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #4caf50;
+        }
+        
+        .feature h3 {
+            margin-bottom: 10px;
+            color: #2e7d32;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            color: #388e3c;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Desi<span class="highlight">Mart</span></h1>
+        <p class="tagline">Your one-stop shop for authentic Indian products</p>
+        
+        <button class="enter-btn" onclick="enterStore()">Enter Store</button>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🛍️</div>
+                <h3>Wide Selection</h3>
+                <p>Curated Indian products for men & women</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💰</div>
+                <h3>Best Prices</h3>
+                <p>All prices in Indian Rupees (₹)</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚚</div>
+                <h3>Fast Delivery</h3>
+                <p>Across India with easy returns</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2023 DesiMart. All prices in Indian Rupees.</p>
+        </div>
+    </div>
+    
+    <script>
+        function enterStore() {
+            window.location.href = "home.html";
+        }
+    </script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch(err => console.log("SW failed", err));
+}
+</script>
+
+
+
+
+</body>
+</html>
